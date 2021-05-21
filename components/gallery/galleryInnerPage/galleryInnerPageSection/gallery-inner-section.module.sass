@@ -1,0 +1,26 @@
+@import '../../../../styles/variable'
+
+.gallery_inner_section_bg
+    width: $full_width
+    margin-top: 210px
+
+.gallery_inner_section_container
+    margin: $zero $auto
+    @extend %container_width
+
+@media only screen and (max-width: $beakpoint_laptop_s)
+    .gallery_inner_section_bg
+        margin-top: 140px 
+    .gallery_inner_section_container
+        width: 90%
+
+@media only screen and (max-width: $beakpoint_laptop_l)
+    .gallery_inner_section_bg
+        margin-top: 100px 
+    .gallery_inner_section_container
+        width: 90%
+
+@media only screen and (max-width: $beakpoint_tablet_s)
+    .gallery_inner_section_bg
+        margin-top: 110px 
+
