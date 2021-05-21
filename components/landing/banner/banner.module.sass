@@ -1,0 +1,84 @@
+@import '../../../styles/variable'
+
+.banner_container
+  @extend %banner_height
+
+.image
+  width: $full_width
+  @extend %banner_height
+
+.video_thumbnail_container
+  background-color: #999
+  width: $full_width
+  @extend %banner_height
+
+.video_play_btn
+  position: $position_absolute
+  z-index: 100
+  display: $flex
+  justify-content: $center
+  align-items: $center
+  width: $full_width
+  background-color: #00000050
+  @extend %banner_height
+
+.play_icon
+  font-size: 100px
+  color: $white_color
+
+.text
+  background-color: #00000000 $important
+  bottom: 160px $important
+  width: 600px $important
+  opacity: $one $important
+  @extend %text_align_left
+
+.text_title
+  @extend %font_size_32
+  color: $white_color
+  font-weight: $five_hundred
+  @extend %font_family_oswald
+
+.text_des
+  color: #FFFFFF9A
+  @extend %font_size_18
+  @extend %font_family_roboto
+
+.text_time
+  color: #E0E0E0
+  @extend %font_size_16
+  @extend %font_family_roboto
+
+.text_button
+  width: 211px
+  height: 54px $important
+  background-color: $yellow_color
+  @extend %font_size_18
+  border: $zero
+  font-weight: $six_hundred
+  @extend %font_family_roboto
+  &:hover,
+  &:focus
+    background-color: $yellow_color
+    color: $black_color
+
+@mixin banner_height_mobile
+  height: 400px
+
+
+@media only screen and (max-width: $beakpoint_mobile_s)
+  .banner_container
+    @include banner_height_mobile
+
+  .image
+    @include banner_height_mobile
+
+  .video_thumbnail_container
+    @include banner_height_mobile
+
+  .video_play_btn
+    @include banner_height_mobile
+
+  .text
+    width: 350px $important
+    bottom: 40px $important
